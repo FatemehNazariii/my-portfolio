@@ -2,12 +2,19 @@
 
 import { useEffect, useState } from "react";
 
+const sections = [
+  { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "certificates", label: "Certificates" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
+
 export default function Navbar() {
-  const [active, setActive] = useState("hero");
+  const [active, setActive] = useState("about");
 
   useEffect(() => {
-    const sections = ["about", "skills", "projects", "contact"];
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -16,11 +23,11 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.35 }
     );
 
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
+    sections.forEach((section) => {
+      const el = document.getElementById(section.id);
       if (el) observer.observe(el);
     });
 
@@ -28,7 +35,7 @@ export default function Navbar() {
   }, []);
 
   const linkStyle = (id: string) =>
-    `text-sm transition ${
+    `text-sm transition whitespace-nowrap ${
       active === id
         ? "text-indigo-400"
         : "text-gray-400 hover:text-white"
@@ -36,19 +43,22 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-[#0b0f17]/60 backdrop-blur-2xl">
-      <div className="max-w-5xl mx-auto flex justify-between px-6 py-4">
-
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         <h1 className="text-white font-semibold">
           Portfolio<span className="text-indigo-400">.</span>
         </h1>
 
-        <div className="hidden md:flex gap-8">
-          <a href="#about" className={linkStyle("about")}>About</a>
-          <a href="#skills" className={linkStyle("skills")}>Skills</a>
-          <a href="#projects" className={linkStyle("projects")}>Projects</a>
-          <a href="#contact" className={linkStyle("contact")}>Contact</a>
+        <div className="hidden md:flex gap-6">
+          {sections.map((section) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              className={linkStyle(section.id)}
+            >
+              {section.label}
+            </a>
+          ))}
         </div>
-
       </div>
     </nav>
   );

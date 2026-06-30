@@ -36,12 +36,14 @@ export default function Hero() {
 />
         </div>
 
-        <h1 className="text-5xl font-bold text-white tracking-tight">
-          Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-indigo-400 to-sky-400 bg-clip-text text-transparent">
-             Fatemeh Nazari
-          </span>
-        </h1>
+       <h1 className="text-4xl md:text-5xl font-bold text-white">
+  <span className="whitespace-nowrap">
+    Fatemeh{" "}
+    <span className="bg-gradient-to-r from-indigo-400 to-sky-400 bg-clip-text text-transparent">
+      Nazari
+    </span>
+  </span>
+</h1>
 
         <p className="mt-6 text-gray-400 leading-8 text-lg">
          Backend Developer specializing in Django, with experience in Laravel and modern web technologies.

@@ -11,7 +11,7 @@ import Particles from "../components/Particles";
 import Footer from "../components/Footer";
 import MouseGlow from "../components/MouseGlow";
 import Experience from "@/components/Experience";
-
+import Certificates from "@/components/Certificates";
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
         <About />
         <Experience />
         <Skills />
+        <Certificates />
         <Projects />
         <Contact />
         <Footer />

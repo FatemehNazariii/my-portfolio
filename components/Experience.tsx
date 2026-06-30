@@ -48,7 +48,6 @@ const education = [
 
       <div className="grid md:grid-cols-2 gap-12">
 
-        {/* EXPERIENCE */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-8">
             Experience
@@ -83,7 +82,6 @@ const education = [
           </div>
         </div>
 
-        {/* EDUCATION */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-8">
             Education

@@ -46,7 +46,6 @@ export default function Projects() {
   return (
     <section id="projects" className="max-w-6xl mx-auto px-6 py-28">
 
-      {/* HEADER */}
       <Reveal>
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-white">
@@ -58,7 +57,6 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* GRID */}
         <div className="grid md:grid-cols-2 gap-8">
 
           {projects.map((p, i) => (
@@ -71,7 +69,6 @@ export default function Projects() {
               hover:-translate-y-2 hover:shadow-[0_25px_60px_-20px_rgba(99,102,241,0.4)]"
             >
 
-              {/* IMAGE */}
               <div className="relative h-56 overflow-hidden">
 
                 <img
@@ -83,7 +80,6 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>
 
-              {/* CONTENT */}
               <div className="p-6">
 
                 <h3 className="text-white font-semibold text-lg">
@@ -94,7 +90,6 @@ export default function Projects() {
                   {p.desc}
                 </p>
 
-                {/* HIGHLIGHTS SAFE */}
                 {p.highlights && p.highlights.length > 0 && (
                   <ul className="mt-4 space-y-2">
                     {p.highlights.map((h) => (
@@ -109,12 +104,10 @@ export default function Projects() {
                   </ul>
                 )}
 
-                {/* TECH */}
                 <p className="text-indigo-300 text-xs mt-5">
                   {p.tech}
                 </p>
 
-                {/* LINKS (ONLY GITHUB) */}
                 <div className="flex gap-3 mt-5">
 
                   <a
