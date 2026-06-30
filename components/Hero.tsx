@@ -29,11 +29,11 @@ export default function Hero() {
       >
 
         <div className="flex justify-center mb-6">
-          <img
-            src="/profile.jpg"
-            alt="profile"
-            className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-2xl border border-white/10 shadow-lg"
-          />
+<img
+  src="/profile.jpg"
+  alt="profile"
+  className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-2xl border border-white/10 shadow-lg"
+/>
         </div>
 
         <h1 className="text-5xl font-bold text-white tracking-tight">
