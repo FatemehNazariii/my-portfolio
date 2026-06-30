@@ -23,7 +23,7 @@ const certificates = [
     year: "2024",
     description:
       "Completed CS50’s Introduction to Programming with Python, including problem sets and final project.",
-    image: "/certificates/cs50p.png",
+    image: "/certificates/CS50P.png",
   },
   {
     title: "CS50x Puzzle Day 2025",
